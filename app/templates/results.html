@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated FAQs</title>
+</head>
+<body>
+    <h1>Generated FAQs</h1>
+    <ul>
+        {% for question, related_questions in faqs.items() %}
+            <li><strong>Q:</strong> {{ question }}</li>
+            <p><strong>Related:</strong><br>{{ related_questions|replace('\n', '<br>') }}</p>
+        {% endfor %}
+    </ul>
+    <a href="/">Go back to upload page</a>
+</body>
+</html>
